@@ -1,3 +1,10 @@
+pnpm init
+
+pnpm add -D typescript ts-node @types/node
+
+npx tsc --init
+
+
 pnpm prune
 pnpm install
 pnpm run build
