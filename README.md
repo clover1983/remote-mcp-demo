@@ -6,7 +6,9 @@ npx tsc --init
 
 
 pnpm prune
+
 pnpm install
+
 pnpm run build
 
 node dist/index.js
