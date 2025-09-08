@@ -1,0 +1,39 @@
+{
+  "name": "remote-mcp-demo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Remote MCP demo",
+  "keywords": [
+    "mcp",
+    "remote"
+  ],
+  "license": "MIT",
+  "author": "Lili Wang",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "remote-mcp-demo": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && node --eval \"import('fs').then(fs => fs.chmodSync('dist/index.js', '755'))\"",
+    "prepare": "pnpm run build",
+    "start": "node dist/index.js"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.14.0",
+    "dotenv": "^16.5.0",
+    "express": "5.0.1",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/express": "^5.0.1",
+    "typescript": "^5.8.3",
+    "prettier": "^3.5.3"
+  }
+}
